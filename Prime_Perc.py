@@ -8,7 +8,7 @@ try:
     from multiprocess import Pool, cpu_count
 except ImportError as im:
     print im
-    print "Please download this 3rd party module from https://github.com/uqfoundation/multiprocess/"
+    print "Please download this 3rd party module from https://github.com/uqfoundation/multiprocess"
     exit(0)
 
 
