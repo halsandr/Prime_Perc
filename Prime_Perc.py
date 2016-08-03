@@ -4,7 +4,12 @@ import os
 import getopt
 import math
 # from multiprocessing import Pool, cpu_count
-from multiprocess import Pool, cpu_count
+try:
+    from multiprocess import Pool, cpu_count
+except ImportError as im:
+    print im
+    print "Please download this 3rd party module from https://github.com/uqfoundation/multiprocess/"
+    exit(0)
 
 
 class PrimePercCalculator:
@@ -170,3 +175,5 @@ if __name__ == '__main__':
         print "\n" + "Completed in less that 1 second"
     else:
         print "\n" + "Completed in %i seconds" % time_total
+
+    exit(0)
